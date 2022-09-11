@@ -4,7 +4,8 @@
     box-sizing: border-box;
 }
 body{
-    height: 100vh;
+    max-height: 100vh;
+    overflow: hidden;
 }
 ::-webkit-input-placeholder{
     color: white;
@@ -19,7 +20,6 @@ input{
 .btn{
     color: white;
     width: 300px;
-    /* height: 30px; */
     text-align: center;
     font-weight: bold;
     margin: auto;
@@ -42,7 +42,7 @@ span{
     height: 620px;
     border-radius: 50%;
     position: relative;
-    margin-left: -485px;
+    margin-left: -299px;
     background: conic-gradient(green 120deg, crimson 120deg 180deg, rgb(126, 126, 208) 180deg 300deg, white 300deg);
     transform: rotate(115deg);
     overflow: hidden;
@@ -61,24 +61,72 @@ span{
     background-color: white;
 }
 .login{
-    position: absolute;
+    position: relative;
     z-index: 11;
-    right: 300px;
+    transform: rotate(244deg);
+    right: 147px;
+    top: -188px;
 }
+
 .resetAccess{
-    position: absolute;
+    position: relative;
     z-index: 11;
-    top: 63px;
-    right: 455px;
-    transform: rotate(-60deg);
-    color: white;
+    top: 26px;
+    left: -313px;
+    transform: rotate(-166deg);
+    color: white; 
 }
 .report{
-    position: absolute;
+    position: relative;
     z-index: 11;
-    bottom: 103px;
-    right: 375px;
-    transform: rotate(50deg);
+    bottom: 265px;
+    right: -167px;
+    transform: rotate(-60deg);
     color: white;
 
+}
+
+
+/* Media Queries */
+
+/* // Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) { 
+      body{
+        overflow: visible;
+    }
+ }
+
+/* // Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) and (max-width: 767.98px) { 
+    .outerCircle{
+        width: 550px;
+        height: 550px;
+    }
+    .innerCircle{
+        width: 240px;
+        height: 240px;
+    }
+    .resetAccess{
+        top: 25px;
+        left: -271px;
+    }
+    .login{
+        right: 130px;
+        top: -158px;
+    }
+}
+
+/* // Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 991.98px) { }
+
+/* // Large devices (desktops, 992px and up) */
+@media (min-width: 992px) and (max-width: 1199.98px) { 
+    .outerCircle{
+        width: 620px;
+        height: 620px;
+    }
+    .innerCircle{
+        width: 300px;
+        height: 300px;
+    }
 }
